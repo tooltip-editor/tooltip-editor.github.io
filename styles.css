@@ -1,18 +1,122 @@
+/* create variables */
+:root {
+    --col-bg: #1e1e1e;
+    --col-bg2: #252525;
+    --col-bg3: #323232;
+}
+/* normalize margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+}
 
+/*  
+========================
+        Main CSS
+========================
+*/
 
-/*  ===================
-    Footer
-    ===================  */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--col-bg);
+    height: 100%;
+}
+
+/*  
+======================
+        Header
+======================
+*/
+
+header {
+    width: 100%;
+    display: flex;
+    background: var(--col-bg2);
+    align-items: center;
+    padding: 0 1.5rem;
+}
+header .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header img {
+    width: 4em;
+    margin-right: 1%;
+}
+header span {
+    font-family: 'MinecraftiaRegular';
+    font-size: 1.3rem;
+}
+header nav {
+    position: absolute;
+    right: 10rem;
+    width: 30%;
+}
+header ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+}
+header a {
+    text-decoration: none;
+    color: #cccccc;
+    font-size: 18px;
+    padding: 0.5rem;
+    transition: text-shadow 0.25s ease;
+}
+header a:hover {
+    text-shadow: 0 0 10px #eee;
+}
+
+/*  
+=================================
+        Minecraft Formats
+=================================
+*/
+.black { color: #000; }
+.dark_blue { color: #00a; }
+.dark_green { color: #0a0; }
+.dark_aqua { color: #0aa; }
+.dark_red { color: #a00; }
+.dark_purple { color: #a0a; }
+.gold { color: #fa0; }
+.gray { color: #aaa; }
+.dark_gray { color: #555; }
+.blue { color: #55f; }
+.green { color: #5f5; }
+.aqua { color: #5ff; }
+.red { color: #f55; }
+.light_purple { color: #f5f; }
+.yellow { color: #ff5; }
+.white { color: #fff; }
+.strikethrough { text-decoration: line-through; }
+.underline { text-decoration: underline; }
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+.special { text-decoration: underline dotted; }
+
+/*  
+======================
+        Footer
+======================
+*/
 
 footer.rights-reserved {
+    font-weight: 400;
     flex-shrink: 0;
-    position: relative;
+    position: fixed;
     bottom: 0;
     height: 3vh;
     width: 100%;
-    color: var(--color-accent);
+    color: #777;
     font-size: 13px;
-    background: var(--color-bg2);
+    background: var(--col-bg3);
     display: flex;
     align-items: center;
     justify-content: center;
