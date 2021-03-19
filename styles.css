@@ -1,0 +1,19 @@
+
+
+/*  ===================
+    Footer
+    ===================  */
+
+footer.rights-reserved {
+    flex-shrink: 0;
+    position: relative;
+    bottom: 0;
+    height: 3vh;
+    width: 100%;
+    color: var(--color-accent);
+    font-size: 13px;
+    background: var(--color-bg2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
