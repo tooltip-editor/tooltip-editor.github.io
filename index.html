@@ -9,6 +9,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/minecraftia" type="text/css" />
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
     <link rel='stylesheet' href="styles.css">
@@ -16,6 +19,21 @@
     <link rel="stylesheet" href="./codemirror/lib/codemirror.css">
     <script src="./codemirror/addon/display/placeholder.js"></script>
     <script src="index.js"></script>
+    <script src="./editor.js" defer></script>
+    <!-- <script type='text/javascript'>
+        function goodbye(e) {
+            if (!e)window.event;
+            //e.cancelBubble is supported by IE - this will kill the bubbling process.
+            e.cancelBubbtrue;
+            e.returnVal'You sure you want to leave?'; //This is displayed on the dialog
+            //e.stopPropagation works in Firefox.
+            if (e.stopPropagation) {
+                e.stopPropagation();
+                e.preventDefault();
+            }
+        }
+        window.onbeforeunlogoodbye;
+    </script> -->
 </head>
 
 <body>
@@ -37,5 +55,77 @@
     </header>
     <footer class="rights-reserved">© 2021 joker876. All rights reserved.</footer>
 </body>
+    <main>
+        <div class="col1">
+            <h1>Input</h1>
+            <div class="inputs">
+                <label for="editor-name">Name</label>
+                <textarea id="editor-name" placeholder="Name goes here...">test &6 foo &l &2 test</textarea>
+                <label for="editor-desc">Description</label>
+                <textarea id="editor-desc" placeholder="Description goes here..."></textarea>
+                <div class="cheat-sheet">
+                    <table>
+                        <tr>
+                            <td><span class="white">&0 = </span><span class="black">Black</span></td>
+                            <td><span class="white">&1 = </span><span class="dark_blue">Dark Blue</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="white">&2 = </span><span class="dark_green">Dark Green</span></td>
+                            <td><span class="white">&3 = </span><span class="dark_aqua">Dark Aqua</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="white">&4 = </span><span class="dark_red">Dark Red</span></td>
+                            <td><span class="white">&5 = </span><span class="dark_purple">Dark Purple</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="white">&6 = </span><span class="gold">Gold</span></td>
+                            <td><span class="white">&7 = </span><span class="gray">Gray</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="white">&8 = </span><span class="dark_gray">Dark Gray</span></td>
+                            <td><span class="white">&9 = </span><span class="blue">Blue</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="white">&a = </span><span class="green">Green</span></td>
+                            <td><span class="white">&b = </span><span class="aqua">Aqua</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="white">&c = </span><span class="red">Red</span></td>
+                            <td><span class="white">&d = </span><span class="light_purple">light Purple</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="white">&e = </span><span class="yellow">Yellow</span></td>
+                            <td><span class="white">&f = </span><span class="white">White</span></td>
+                        </tr>
+                        <tr class="line">
+                            <td><span class="white">&k = </span><span class="matrix white">Matrix</span></td>
+                            <td><span class="white">&l = </span><span class="bold white">Bold</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="white">&m = </span><span class="strikethrough white">Strikethrough</span></td>
+                            <td><span class="white">&n = </span><span class="underline white">Underline</span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="white">&o = </span><span class="italic white">Italic</span></td>
+                            <td><span class="white">&r = </span><span class="reset white">Reset</span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col2">
+            <h1>Output</h1>
+            <div class="preview">
+                <div class="mcui">
 
+                </div>
+            </div>
+            <div class="output">
+        
+            </div>
+        </div>
+    </main>
+    <footer>© 2021 joker876. All rights reserved.</footer>
+</body>
+""
 </html>
