@@ -8,6 +8,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /*  
@@ -33,9 +34,11 @@ body {
 */
 
 header {
+    position: static;
     width: 100%;
+    height: 4rem;
     display: flex;
-    background: var(--col-bg2);
+    background: var(--col-bg3);
     align-items: center;
     padding: 0 1.5rem;
 }
@@ -45,7 +48,7 @@ header .logo-container {
     justify-content: space-between;
 }
 header img {
-    width: 4em;
+    width: 4rem;
     margin-right: 1%;
 }
 header span {
@@ -79,27 +82,41 @@ header a:hover {
         Minecraft Formats
 =================================
 */
-.black { color: #000; }
-.dark_blue { color: #00a; }
-.dark_green { color: #0a0; }
-.dark_aqua { color: #0aa; }
-.dark_red { color: #a00; }
-.dark_purple { color: #a0a; }
-.gold { color: #fa0; }
-.gray { color: #aaa; }
-.dark_gray { color: #555; }
-.blue { color: #55f; }
-.green { color: #5f5; }
-.aqua { color: #5ff; }
-.red { color: #f55; }
-.light_purple { color: #f5f; }
-.yellow { color: #ff5; }
-.white { color: #fff; }
-.strikethrough { text-decoration: line-through; }
-.underline { text-decoration: underline; }
-.bold { font-weight: bold; }
-.italic { font-style: italic; }
-.special { text-decoration: underline dotted; }
+.cm-black, .black { color: #000; }
+.cm-dark_blue, .dark_blue { color: #00a; }
+.cm-dark_green, .dark_green { color: #0a0; }
+.cm-dark_aqua, .dark_aqua { color: #0aa; }
+.cm-dark_red, .dark_red { color: #a00; }
+.cm-dark_purple, .dark_purple { color: #a0a; }
+.cm-gold, .gold { color: #fa0; }
+.cm-gray, .gray { color: #aaa; }
+.cm-dark_gray, .dark_gray { color: #555; }
+.cm-blue, .blue { color: #55f; }
+.cm-green, .green { color: #5f5; }
+.cm-aqua, .aqua { color: #5ff; }
+.cm-red, .red { color: #f55; }
+.cm-light_purple, .light_purple { color: #f5f; }
+.cm-yellow, .yellow { color: #ff5; }
+.cm-white, .white { color: #fff; }
+.cm-strikethrough, .strikethrough { text-decoration: line-through; }
+.cm-underline, .underline { text-decoration: underline; }
+.cm-bold, .bold { font-weight: bold; }
+.cm-italic, .italic { font-style: italic; }
+/* .cm-special, .special {  } */
+.cm-special, .special {
+    position: relative;
+    border: 1px dotted currentColor;
+}
+.cm-special::before, .special::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: currentColor !important;
+    opacity: 0.2;
+}
 
 /*  
 ======================
@@ -107,7 +124,7 @@ header a:hover {
 ======================
 */
 
-footer.rights-reserved {
+footer {
     font-weight: 400;
     flex-shrink: 0;
     position: fixed;
