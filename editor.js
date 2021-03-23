@@ -65,7 +65,7 @@ CodeMirror.defineMode("colorCodes", function () {
                 if (codes.includes(stream.peek()) && state.special == 1) state.special = 2;
                 else state.special = 0;
             }
-
+            
             //parse classes
             let ret = '';
             states.forEach(s => {

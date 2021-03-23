@@ -238,13 +238,13 @@ header a:hover {
     height: max-content;
     position: relative;
     top: 2rem;
-    left: 0;
     text-shadow: 0.125em 0.125em #3F3F3F;
+    color: #aaa;
     background-color: rgba(16, 0, 16, 0.94);
     padding: 0.375em;
     padding-bottom: 0.6em;
     font-family: 'MinecraftiaRegular';
-    font-size: 2rem;
+    font-size: 1.25rem;
     word-spacing: 4px;
     white-space: nowrap;
     line-height: 1.25em;
@@ -283,7 +283,7 @@ header a:hover {
     margin-top: 0.25em;
 }
 .tooltip > span {
-    
+
 }
 
 
