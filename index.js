@@ -61,5 +61,5 @@ document.getElementById("editor-desc").addEventListener("input", function(){
     descField.innerHTML = parseToTooltip(descEditor.value);
 })
 
-//nameField.innerHTML = parseToTooltip(nameEditor.value);
-//descField.innerHTML = parseToTooltip(descEditor.value);
+nameField.innerHTML = parseToTooltip(nameEditor.value);
+descField.innerHTML = parseToTooltip(descEditor.value);
