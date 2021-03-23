@@ -10,7 +10,7 @@ CodeMirror.defineMode("colorCodes", function () {
                 [states[3]]: false,
                 [states[4]]: false,
                 [states[5]]: false,
-                [states[6]]: false,
+                [states[6]]: 0,
             };
         },
         token: function (stream, state) {
@@ -47,32 +47,32 @@ CodeMirror.defineMode("colorCodes", function () {
                     state[states[5]] = false;
                 }
             } else stream.next();
-            //mark special characters
-            console.log(2, codes.includes(stream.peek()));
-            if (codes.includes(stream.peek())) state[states[6]] = false;
-            stream.backUp(1);
-            if (stream.peek() == '&') {
+            // ============ mark special characters
+            // first case
+            stream.backUp(2);
+            if (stream.peek() == '&') state.special = 1;
+            else state.special = 0;
+            stream.next();
+            if (codes.includes(stream.peek()) && state.special == 1) state.special = 2;
+            else state.special = 0;
+            stream.next();
+            // second case
+            if (state.special != 2) {
+                stream.backUp(1);
+                if (stream.peek() == '&') state.special = 1;
+                else state.special = 0;
                 stream.next();
-                console.log(3, codes.includes(stream.peek()));
-                if (codes.includes(stream.peek())) {
-                    state[states[6]] = true;
-                }
-                else state[states[6]] = false;
-                stream.next();
+                if (codes.includes(stream.peek()) && state.special == 1) state.special = 2;
+                else state.special = 0;
             }
-            else {
-                stream.next();
-            }
-            stream.backUp(1)
-            if (stream.peek() == ' ') state[states[6]] = false;
-            stream.next()
+
             //parse classes
             let ret = '';
             states.forEach(s => {
                 if (s == 'color' && state[s]) {
                     ret = state[s];
                 }
-                else if (state[s]) {
+                else if ((s == 'special' && state[s] == 2) || (s != 'special' && state[s])) {
                     ret += (ret ? ' ' : '') + s;
                 }
             })

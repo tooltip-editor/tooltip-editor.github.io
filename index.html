@@ -17,7 +17,7 @@
     <script src="./codemirror/lib/codemirror.js"></script>
     <link rel="stylesheet" href="./codemirror/lib/codemirror.css">
     <script src="./codemirror/addon/display/placeholder.js"></script>
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
     <script src="./editor.js" defer></script>
     <!-- <script type='text/javascript'>
         function goodbye(e) {
@@ -112,17 +112,21 @@
         </div>
         <div class="col2">
             <h1>Output</h1>
-            <div class="preview">
-                <div class="mcui">
-
-                </div>
+            <div class="tooltip">
+                <span id="tooltip-name">
+                    Test
+                </span>
+                <span id="tooltip-desc">
+                    Test 2
+                </span>
             </div>
             <div class="output">
-        
+            
             </div>
         </div>
     </main>
     <footer>© 2021 joker876. All rights reserved.</footer>
 </body>
-""
 </html>
+
+
