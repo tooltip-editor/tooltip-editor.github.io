@@ -137,7 +137,7 @@ header a:hover {
 .cm-underline, .underline { text-decoration: underline; }
 .cm-bold, .bold { font-weight: bold; }
 .cm-italic, .italic { font-style: italic; }
-/* .cm-special, .special {  } */
+
 .cm-special, .special {
     position: relative;
     border: 1px dotted currentColor;
@@ -152,6 +152,23 @@ header a:hover {
     background: currentColor !important;
     opacity: 0.2;
 }
+
+.tooltip .black { text-shadow: 0.125em 0.125em #0004; }
+.tooltip .dark_blue { text-shadow: 0.125em 0.125em #00a4; }
+.tooltip .dark_green { text-shadow: 0.125em 0.125em #0a04; }
+.tooltip .dark_aqua { text-shadow: 0.125em 0.125em #0aa4; }
+.tooltip .dark_red { text-shadow: 0.125em 0.125em #a004; }
+.tooltip .dark_purple { text-shadow: 0.125em 0.125em #a0a4; }
+.tooltip .gold { text-shadow: 0.125em 0.125em #fa04; }
+.tooltip .gray { text-shadow: 0.125em 0.125em #aaa4; }
+.tooltip .dark_gray { text-shadow: 0.125em 0.125em #5554; }
+.tooltip .blue { text-shadow: 0.125em 0.125em #55f4; }
+.tooltip .green { text-shadow: 0.125em 0.125em #5f54; }
+.tooltip .aqua { text-shadow: 0.125em 0.125em #5ff4; }
+.tooltip .red { text-shadow: 0.125em 0.125em #f554; }
+.tooltip .light_purple { text-shadow: 0.125em 0.125em #f5f4; }
+.tooltip .yellow { text-shadow: 0.125em 0.125em #ff54; }
+.tooltip .white { text-shadow: 0.125em 0.125em #fff4; }
 
 /*  
 =======================
@@ -238,7 +255,6 @@ header a:hover {
     height: max-content;
     position: relative;
     top: 2rem;
-    text-shadow: 0.125em 0.125em #3F3F3F;
     color: #aaa;
     background-color: rgba(16, 0, 16, 0.94);
     padding: 0.375em;
